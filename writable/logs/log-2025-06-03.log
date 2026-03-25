@@ -1,0 +1,346 @@
+DEBUG - 2025-06-03 05:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 05:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 07:37:45 --> mysqli_sql_exception: Unknown column 'sapa_m_instansi.insNama' in 'field list' in D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sapa_t_...', 0)
+#1 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sapa_t_...')
+#2 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sapa_t_...')
+#3 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sapa_t_...', Array, false)
+#4 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 D:\Apps\Xampp\htdocs\sapa_intan\app\Controllers\Dashboard.php(295): Hermawan\DataTables\DataTable->toJson(true)
+#8 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Dashboard->getDatatable()
+#9 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\Apps\Xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-03 07:37:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_m_instansi.insNama' in 'field list'
+[Method: GET, Route: dashboard/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN :usulStatus:
+ LIMIT 10', [...], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Dashboard.php(295): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:37:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_m_instansi.insNama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN (0,1,2,3,5)
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN (0,1,2,3,5)
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN :usulStatus:
+ LIMIT 10', [...], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Dashboard.php(295): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:37:45 --> [Caused by] mysqli_sql_exception: Unknown column 'sapa_m_instansi.insNama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN (0,1,2,3,5)
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN (0,1,2,3,5)
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN (0,1,2,3,5)
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `sapa_t_usul_sarpras`.`usulKode`, `sapa_t_usul_sarpras`.`usulTipeKode`, `sapa_t_usul_sarpras`.`usulKonKode`, `sapa_t_usul_sarpras`.`usulKepemilikan`, `sapa_t_usul_sarpras`.`usulStatus`, `sapa_r_kategori_alsintan`.`kalNama`, `sapa_r_tipe_alsintan`.`tipeNama`, `sapa_t_usul_profil`.`proTipeUsul`, `sapa_t_usul_profil`.`proPplNama`, `sapa_t_usul_profil`.`proPplNamaKetua`, `sapa_t_usul_profil`.`proKabNamaLengkap`, `sapa_m_instansi`.`insNama`
+FROM `sapa_t_usul_sarpras`
+LEFT JOIN `sapa_r_tipe_alsintan` ON `sapa_r_tipe_alsintan`.`tipeKode` = `sapa_t_usul_sarpras`.`usulTipeKode`
+LEFT JOIN `sapa_r_kategori_alsintan` ON `sapa_r_kategori_alsintan`.`kalKode` = `sapa_r_tipe_alsintan`.`tipeKalKode`
+LEFT JOIN `sapa_t_usul_profil` ON `sapa_t_usul_profil`.`proUsername` = `sapa_t_usul_sarpras`.`usulUsername`
+LEFT JOIN `sapa_m_instansi` ON `sapa_m_instansi`.`insKode` = `sapa_t_usul_profil`.`proInsKode`
+WHERE `usulStatus` NOT IN :usulStatus:
+ LIMIT 10', [...], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Dashboard.php(295): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 07:38:06 --> ErrorException: Undefined variable $kotaList
+[Method: GET, Route: master_instansi]
+in APPPATH\Views\instansi\index.php on line 138.
+ 1 APPPATH\Views\instansi\index.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kotaList', 'D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php', 138)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('instansi/index', [], true)
+ 5 APPPATH\Controllers\Master_instansi.php(44): view('instansi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 07:39:24 --> ErrorException: Undefined variable $instansiList
+[Method: GET, Route: master_instansi]
+in APPPATH\Views\instansi\index.php on line 171.
+ 1 APPPATH\Views\instansi\index.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $instansiList', 'D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php', 171)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('instansi/index', [], true)
+ 5 APPPATH\Controllers\Master_instansi.php(57): view('instansi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 07:40:16 --> ErrorException: Undefined variable $instansiList
+[Method: GET, Route: master_instansi]
+in APPPATH\Views\instansi\index.php on line 253.
+ 1 APPPATH\Views\instansi\index.php(253): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $instansiList', 'D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php', 253)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Apps\\Xampp\\htdocs\\sapa_intan\\app\\Views\\instansi\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('instansi/index', [], true)
+ 5 APPPATH\Controllers\Master_instansi.php(57): view('instansi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 07:40:30 --> mysqli_sql_exception: Unknown column 'sapa_t_account.accKotaKode' in 'on clause' in D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\sapa_intan\app\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+#8 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+#9 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-06-03 07:40:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+[Method: GET, Route: master_instansi/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:40:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:40:30 --> [Caused by] mysqli_sql_exception: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 07:40:40 --> mysqli_sql_exception: Unknown column 'sapa_t_account.accKotaKode' in 'on clause' in D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Apps\Xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\sapa_intan\app\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+#8 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+#9 D:\Apps\Xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-06-03 07:40:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+[Method: GET, Route: master_instansi/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:40:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-03 07:40:40 --> [Caused by] mysqli_sql_exception: Unknown column 'sapa_t_account.accKotaKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `sapa_m_instansi`
+LEFT JOIN `sapa_r_kota` ON `sapa_t_account`.`accKotaKode` = `sapa_r_kota`.`kotaKode`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Master_instansi.php(68): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Master_instansi->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master_instansi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-03 07:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 07:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

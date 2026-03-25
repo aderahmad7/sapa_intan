@@ -1,0 +1,1437 @@
+DEBUG - 2025-07-17 13:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 13:36:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'sasapa' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sasapa', 3306, '', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sapa_intan\app\Controllers\Auth.php(33): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Auth->postLogin()
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'sasapa' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sapa_intan\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sapa_intan\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sapa_intan\app\Controllers\Auth.php(33): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Auth->postLogin()
+#7 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-07-17 13:36:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'sasapa'
+[Method: POST, Route: auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `sapa_t_account`
+WHERE `accUsername` = :accUsername:
+AND `accPasswd` = :accPasswd:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->postLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 13:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 13:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 14:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 15:34:55 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: poktan/add_poktan]
+in APPPATH\Controllers\Poktan.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sapa_intan\\app\\Controllers\\Poktan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Poktan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Poktan')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(174): class_exists('\\App\\Controllers\\Poktan')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(282): CodeIgniter\Router\AutoRouterImproved->searchFirstController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('poktan/add_poktan', 'post')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('poktan/add_poktan')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('poktan/add_poktan')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 15:35:00 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: poktan]
+in APPPATH\Controllers\Poktan.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sapa_intan\\app\\Controllers\\Poktan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Poktan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Poktan')
+ 4 SYSTEMPATH\Router\AutoRouterImproved.php(174): class_exists('\\App\\Controllers\\Poktan')
+ 5 SYSTEMPATH\Router\AutoRouterImproved.php(282): CodeIgniter\Router\AutoRouterImproved->searchFirstController()
+ 6 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouterImproved->getRoute('poktan', 'get')
+ 7 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('poktan')
+ 8 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('poktan')
+ 9 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 15:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 15:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:34:34 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:34:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:34:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:34:34 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:35:24 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:35:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:35:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:35:24 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:37:21 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:37:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:21 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:37:36 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:37:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:36 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:37:52 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:37:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:37:52 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokTipeUsul`, `pokUsername`, `pokInsKode`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`, `pokPplKcmKode`, `pokPplDesa`, `pokPplPenyuluhNama`, `pokPplPenyuluhTelp`, `pokKabNamaLengkap`, `pokKabTelp`, `pokKabJabatan`, `pokKabFileTTd`, `pokKabKotaKode`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(62): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:39:17 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:39:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:39:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:39:17 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:40:29 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:40:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:40:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:40:29 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:43:48 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:43:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:43:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:43:48 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 16:45:23 --> mysqli_sql_exception: Unknown column 'null' in 'order clause' in C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\sapa_intan\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode...', 0)
+#1 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode...')
+#2 C:\xampp\htdocs\sapa_intan\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode...')
+#3 C:\xampp\htdocs\sapa_intan\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode...', Array, false)
+#4 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\sapa_intan\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\sapa_intan\app\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+#9 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+#10 C:\xampp\htdocs\sapa_intan\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sapa_intan\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sapa_intan\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sapa_intan\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\sapa_intan\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2025-07-17 16:45:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+[Method: GET, Route: poktan/datatable]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:45:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+CRITICAL - 2025-07-17 16:45:23 --> [Caused by] mysqli_sql_exception: Unknown column 'null' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pokKode`, `pokUsername`, `pokPplNama`, `pokPplNamaKetua`, `pokPplFileKTP`, `pokPplTelp`
+FROM `sapa_t_usul_poktan`
+ORDER BY `null` ASC
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Poktan.php(51): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poktan->getDatatable()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poktan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 16:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 16:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:16:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:39:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 17:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:10:14 --> ErrorException: Undefined array key "pokNama"
+[Method: GET, Route: dashboard/usul_sapras]
+in APPPATH\Views\dashboard\usul_sapras.php on line 191.
+ 1 APPPATH\Views\dashboard\usul_sapras.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pokNama"', 'C:\\xampp\\htdocs\\sapa_intan\\app\\Views\\dashboard\\usul_sapras.php', 191)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sapa_intan\\app\\Views\\dashboard\\usul_sapras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/usul_sapras', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(323): view('dashboard/usul_sapras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getUsul_sapras()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:35:24 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard/profil_pengusul/109]
+in APPPATH\Controllers\Dashboard.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getProfil_pengusul('109')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:35:36 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard/profil_pengusul/108]
+in APPPATH\Controllers\Dashboard.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getProfil_pengusul('108')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:35:49 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard/profil_pengusul/108]
+in APPPATH\Controllers\Dashboard.php on line 110.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getProfil_pengusul('108')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:37:30 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard/profil_pengusul/108]
+in APPPATH\Controllers\Dashboard.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getProfil_pengusul('108')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-17 18:40:04 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard/profil_pengusul/108]
+in APPPATH\Controllers\Dashboard.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getProfil_pengusul('108')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\sapa_intan\\public\\index.php')
+DEBUG - 2025-07-17 18:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-17 18:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
